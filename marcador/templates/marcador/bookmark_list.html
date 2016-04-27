@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Ultimas Publicações{% endblock %}
+
+{% block heading %}
+  <h2>Ultimas Publicações</h2>
+{% endblock %}
+
+{% block content %}
+  <ul class="list-unstyled">
+  {% for bookmark in bookmarks %}
+    <li class="well well-sm">{% include "marcador/bookmark.html" %}</li>
+  {% empty %}
+    <li>Este usuário ainda não tem nenhuma publicação</li>
+  {% endfor %}
+  </ul>
+{% endblock %}
